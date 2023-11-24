@@ -1,2 +1,8 @@
 # Virtual Environment Directory
 venv/
+
+# Implementation Testing Environments
+*.ipynb
+
+# Interpreter Output
+__pycache__/
