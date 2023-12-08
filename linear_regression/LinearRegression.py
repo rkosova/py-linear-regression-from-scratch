@@ -17,8 +17,8 @@ class LinearRegression:
         for i in range(len(self.batched_X)):
             pred = self.predict(self.batched_X[i])
             loss = np.mean(np.power(pred - self.batched_y[i], 2)/2)
-            loss_w_grad = 2 * (pred - self.batched_y[i]) * self.batched_X[i]
-            loss_b_grad = 2 * (pred - self.batched_y[i])
+            loss_w_grad = (pred - self.batched_y[i]) * self.batched_X[i]
+            loss_b_grad = (pred - self.batched_y[i])
 
 
             loss_w_mean_grad = np.mean(loss_w_grad)
